@@ -1,0 +1,20 @@
+{
+  "projectName": "safecility-test",
+  "mqtt": {
+    "appID": "**",
+    "username": "**@ttn",
+    "address": "ssl://eu1.cloud.thethings.network:8883",
+    "downlink": false,
+    "location": false,
+    "signal": false
+  },
+  "secret": {
+    "name": "**",
+    "version": 1
+  },
+  "topics": {
+    "joins": "test-eastron-joins",
+    "uplinks": "test-eastron-uplinks",
+    "signal": "test-eastron-signal"
+  }
+}

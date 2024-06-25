@@ -1,0 +1,10 @@
+{
+  "projectName": "safecility-test",
+  "topics": {
+    "eastron": "local-eastron-readings"
+  },
+  "subscriptions": {
+    "eastron": "local-eastron-datastore-sub"
+  },
+  "storeAll": false
+}

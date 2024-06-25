@@ -1,0 +1,20 @@
+{
+  "projectName": "safecility-test",
+  "mqtt": {
+    "appID": "sdm230-lora",
+    "username": "sdm230-lora@ttn",
+    "address": "ssl://eu1.cloud.thethings.network:8883",
+    "downlink": false,
+    "location": false,
+    "signal": false
+  },
+  "secret": {
+    "name": "ttn-sdm230",
+    "version": 1
+  },
+  "topics": {
+    "joins": "local-ttn-eastron-joins",
+    "uplinks": "local-ttn-eastron-uplinks",
+    "signal": "local-ttn-eastron-signal"
+  }
+}

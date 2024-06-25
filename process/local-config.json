@@ -1,0 +1,23 @@
+{
+  "projectName": "safecility-test",
+  "sql": {
+    "config": {
+      "user": "editor",
+      "host": "localhost",
+      "port": 3306,
+      "database": "safecility"
+    },
+    "secret": {
+      "name": "microservice-sql-password",
+      "version": 1
+    }
+  },
+  "topics": {
+    "uplinks": "local-ttn-eastron-uplinks",
+    "eastron": "local-eastron-readings"
+  },
+  "subscriptions": {
+    "uplinks": "local-ttn-eastron-uplinks-sub"
+  },
+  "pipeAll": true
+}

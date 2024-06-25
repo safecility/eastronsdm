@@ -1,0 +1,11 @@
+{
+  "projectName": "safecility-test",
+  "topics": {
+    "eastron": "local-eastron-readings",
+    "usage": "local-power-pipeline-usage"
+  },
+  "subscriptions": {
+    "eastron": "local-eastron-usage-sub"
+  },
+  "storeAll": false
+}

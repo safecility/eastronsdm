@@ -1,0 +1,22 @@
+{
+  "projectName": "safecility-test",
+  "pubsub": {
+    "topics": {
+      "eastron": "local-eastron-readings",
+      "bigquery": "local-eastron-bigquery-store"
+    },
+    "subscriptions": {
+      "eastron": "local-eastron-readings-bigquery-sub",
+      "bigquery": "local-eastron-bigquery-store-sub"
+    }
+  },
+  "bigQuery": {
+    "dataset": "energy",
+    "table": "test-eastron",
+    "schema": {
+      "name": "bigquery-eastron",
+      "filePath": "./protobuffer/eastronsdm.proto"
+    }
+  },
+  "storeAll": true
+}

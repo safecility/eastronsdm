@@ -1,0 +1,23 @@
+{
+  "projectName": "safecility-test",
+  "sql": {
+    "config": {
+      "user": "editor",
+      "instanceConnectionName": "safecility-test:europe-west1:safecility-test",
+      "port": 3306,
+      "database": "safecility"
+    },
+    "secret": {
+      "name": "microservice-sql-password",
+      "version": 1
+    }
+  },
+  "topics": {
+    "uplinks": "test-mqtt-bytes",
+    "eastron": "test-eastron"
+  },
+  "subscriptions": {
+    "uplinks": "test-mqtt-bytes-sub"
+  },
+  "pipeAll": true
+}

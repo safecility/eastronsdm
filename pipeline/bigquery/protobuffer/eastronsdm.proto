@@ -1,0 +1,16 @@
+syntax = "proto3";
+package energy;
+option go_package = ".;protobuffer";
+
+// protoc --go_out=./  ./eastronsdm.proto
+message EastronSdmBq {
+  string   DeviceUID            = 1;
+  string   Time                 = 2;
+  double   ImportActiveEnergy   = 3;
+  double   ExportActiveEnergy   = 4;
+  double   ActivePower          = 5;
+  double   InstantaneousCurrent = 6;
+  double   InstantaneousVoltage = 7;
+  double   PowerFactor          = 8;
+  double   RelayState           = 9;
+}

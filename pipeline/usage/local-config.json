@@ -7,5 +7,5 @@
   "subscriptions": {
     "eastron": "local-eastron-usage-sub"
   },
-  "storeAll": false
+  "storeAll": true
 }

@@ -37,7 +37,7 @@ func (mc EastronSdmReading) Usage() (*MeterReading, error) {
 	}
 	if mc.Device == nil {
 		log.Warn().Str("UID", mc.UID).Msg("device does not have device definitions")
-		mc.Device = &lib.Device{
+		mr.Device = &lib.Device{
 			DeviceUID: mc.UID,
 		}
 	} else {

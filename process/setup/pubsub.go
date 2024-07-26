@@ -4,9 +4,9 @@ import (
 	"cloud.google.com/go/pubsub"
 	"context"
 	"github.com/rs/zerolog/log"
-	"github.com/safecility/devices/eastronsdm/process/helpers"
 	"github.com/safecility/go/lib/stream"
 	"github.com/safecility/go/setup"
+	"github.com/safecility/iot/devices/eastronsdm/process/helpers"
 	"os"
 	"time"
 )

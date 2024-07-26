@@ -1,15 +1,20 @@
 {
   "projectName": "safecility-test",
-  "sql": {
-    "config": {
-      "user": "editor",
-      "host": "localhost",
-      "port": 3306,
-      "database": "safecility"
+  "store": {
+    "rest": {
+      "host": "http://localhost"
     },
-    "secret": {
-      "name": "microservice-sql-password",
-      "version": 1
+    "sql": {
+      "config": {
+        "user": "editor",
+        "host": "localhost",
+        "port": 3306,
+        "database": "safecility"
+      },
+      "secret": {
+        "name": "microservice-sql-password",
+        "version": 1
+      }
     }
   },
   "topics": {

@@ -6,10 +6,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/rs/zerolog/log"
-	"github.com/safecility/devices/eastronsdm/process/messages"
-	"github.com/safecility/devices/eastronsdm/process/store"
 	"github.com/safecility/go/lib"
 	"github.com/safecility/go/lib/stream"
+	"github.com/safecility/iot/devices/eastronsdm/process/messages"
+	"github.com/safecility/iot/devices/eastronsdm/process/store"
 	"net/http"
 	"os"
 )

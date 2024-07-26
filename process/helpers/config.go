@@ -12,12 +12,27 @@ const (
 	OSDeploymentKey = "EASTRON_DEPLOYMENT"
 )
 
+type Rest struct {
+	Host string  `json:"host"`
+	Port *string `json:"port"`
+}
+
+func (r Rest) Address() string {
+	if r.Port != nil {
+		return fmt.Sprintf("%s:%d", r.Host, r.Port)
+	}
+	return r.Host
+}
+
 type Config struct {
 	ProjectName string `json:"projectName"`
-	Sql         struct {
-		Config setup.MySQLConfig `json:"config"`
-		Secret setup.Secret      `json:"secret"`
-	} `json:"sql"`
+	Store       struct {
+		Sql struct {
+			Config setup.MySQLConfig `json:"config"`
+			Secret setup.Secret      `json:"secret"`
+		} `json:"sql"`
+		Rest *Rest `json:"rest"`
+	}
 	Topics struct {
 		Uplinks string `json:"uplinks"`
 		Eastron string `json:"eastron"`

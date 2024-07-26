@@ -8,8 +8,7 @@ import (
 
 // TODO adjust locationId when changed on local db
 const (
-	getDeviceStmt = `SELECT uid as DeviceUID, name as DeviceName, tag as DeviceTag, 
-       		groupUID, companyUID, parentUID
+	getDeviceStmt = `SELECT uid as DeviceUID, name as DeviceName, tag as DeviceTag, companyUID, parentUID
 		FROM device
 		WHERE type='power' AND device.uid = ?`
 )
@@ -54,12 +53,11 @@ func scanDevice(s rowScanner) (*lib.Device, error) {
 		name       sql.NullString
 		uid        sql.NullString
 		tag        sql.NullString
-		groupUID   sql.NullString
 		companyUID sql.NullString
 		parentUID  sql.NullString
 	)
 
-	err := s.Scan(&name, &uid, &tag, &groupUID, &companyUID, &parentUID)
+	err := s.Scan(&name, &uid, &tag, &companyUID, &parentUID)
 	if err != nil {
 		if err == sql.ErrNoRows {
 			return nil, nil
@@ -72,10 +70,6 @@ func scanDevice(s rowScanner) (*lib.Device, error) {
 		DeviceMeta: &lib.DeviceMeta{
 			DeviceName: name.String,
 			DeviceTag:  tag.String,
-		},
-		Group: &lib.Group{
-			GroupUID:   groupUID.String,
-			CompanyUID: companyUID.String,
 		},
 	}
 
